@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabletennis-analyzer"
+version = "0.1.0"
+description = "Windows desktop app for table-tennis motion comparison from two videos."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy>=1.26,<2",
+  "pandas>=2.2,<3",
+  "scipy>=1.11,<2",
+  "opencv-contrib-python>=4.11,<4.12",
+  "mediapipe==0.10.21",
+  "PySide6>=6.7,<7",
+  "openai>=1.40,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "pyinstaller>=6.21,<7"]
+
+[project.scripts]
+tabletennis-analyzer = "tabletennis_analyzer.app:main"
+tabletennis-analyze-video = "tabletennis_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

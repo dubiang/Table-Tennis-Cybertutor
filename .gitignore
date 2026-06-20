@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+outputs/
+.tools/
+.agents/
+tmp_*/
+tmp_*.mp4
+github_upload/
+*.spec.bak
+

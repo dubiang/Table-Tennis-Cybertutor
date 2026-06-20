@@ -1,0 +1,2 @@
+"""Core motion-analysis pipeline."""
+
